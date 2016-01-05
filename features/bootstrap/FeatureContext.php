@@ -48,13 +48,13 @@ return (isset($parameters[$name])) ? $parameters[$name] : null;
 #}
 
     /**
-     * @Given /^I want to add (\d+) to service$/
+     * @Given /^I want to add $id to $service$/
      */
 public function createUriRequest($id, $service)
 {
 $uri = 'v1/places/'.$service.'/'.$id;
 
-$request = $this->_client->get($uri);
+$request = $this->_client->put($uri);
 $this->_response = $request;
 }
 
