@@ -47,16 +47,13 @@ return (isset($parameters[$name])) ? $parameters[$name] : null;
 #$this->_response = $request;
 #}
 
-/**
-* @When /^I want to add "([^"]*)"$ to "([^"]*)"$/
-*/
-public function createUri ($id, $service)
+    /**
+     * @Given /^I want to add (\d+) to service$/
+     */
+public function createUriRequest($id, $service)
 {
-$uri = "v1/places/".$service."/".$id;
-}
+$uri = 'v1/places/'.$service.'/'.$id;
 
-public function iRequest($uri)
-{
 $request = $this->_client->get($uri);
 $this->_response = $request;
 }
