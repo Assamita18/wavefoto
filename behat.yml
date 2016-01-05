@@ -1,0 +1,5 @@
+default:
+  context:
+    parameters:
+    #  base_url: https://api.github.com
+        base_url: http://uk9c0jvb9f6nvxvhursp.olapic.com/v1
